@@ -75,7 +75,6 @@ public final class Product {
                     var productComposition = Material.DAO.forProduct(connection, productId);
                     var selectedProduct = new Product(productId, productName, productDescription, productComposition);
                     product = Optional.of(selectedProduct);
-
                   }
             } catch (SQLException e) {
                 throw new DAOException(e);
